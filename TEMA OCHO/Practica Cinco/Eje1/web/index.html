@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            input:invalid:required
+            {
+               border-color: red;
+            }
+            b
+            {
+                color: red;
+                font-size: 8pt;
+                padding-left: 10px;
+            }
+            #botones
+            {
+                padding-left: 50px;
+            }
+            #botones input
+            {
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="Controlador" method="post">
+            Usuario: <input type="text" name="usuario" required pattern="[A-Za-z0-9]+">
+            <br>
+            <br>
+            Contrase&ntilde;a: <input type="password" name="contra" required pattern="[A-Z0-9a-z]+">
+            <br>
+            <p><b>*TODOS LOS CAMPOS SON OBLIGATORIOS</b></p>
+            <div id="botones">
+            <input type="submit" value="Acceder">
+            <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </body>
+</html>

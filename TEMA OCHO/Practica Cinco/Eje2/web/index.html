@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            b
+            {
+                color:red; 
+                border-bottom: 1px solid red;
+                font-size: 9pt;
+            }
+            b:hover i
+            {
+                color:black;
+            }
+            input:invalid
+            {
+                border-color: red;
+            }
+            label
+            {
+                font-size: 11pt;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Restaurante DAW </h1>
+        <h3> Haz tu reserva</h3>
+        <form action="Controlador" method="post">
+            <label>Nombre: </label><input type="text" name ="nombre" required pattern="[A-Za-z]+" />
+            <br>
+            <label>Correo electr&oacute;nico: </label><input type="email" name="correo" required />
+            <br>
+            <label>Teléfono:</label> <input type="tel" name="telefono" required pattern="[6|7][0-9]{8}" />
+            <br>
+            <label>Fecha de Reserva:</label> <input type="date" name="fechar" required />
+            <br>
+            <label>Franja Horaria: </label>
+            <select name="franjah">
+                <option>13:00 -- 14:00</option>
+                <option>14:00 -- 15:00</option>
+            </select>
+            <br>
+            <label>Comensales (min 1, max 10): </label><input type="number" name="comensales" min="1" max="10" required />
+            <br>
+            <label>Color del mantel: </label><input type="color" name="colorm"/>
+            <br>
+            <label>Demandas especiales:</label>
+            <br>
+            <textarea name="demandas" placeholder="alergias, tronas, ..."></textarea>
+            <br>
+            <br>
+            <b>TODOS LOS DATOS <i>MENOS</i> LAS <br> 
+                <i>DEMANDAS ESPECIALES</i> SON <br> 
+                OBLIGATORIOS</b>
+            <br>
+            <br>
+            <div id="botones">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+            </div>
+        </form>    
+    </body>
+</html>
