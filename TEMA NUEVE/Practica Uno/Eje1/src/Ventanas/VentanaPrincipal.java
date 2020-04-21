@@ -115,6 +115,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void tfOpcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfOpcionActionPerformed
         try
         {
+            if (tfOpcion.getText().isEmpty())
+                throw new Exception("CAMPO OBLIGATORIO");
             int opcion = Integer.parseInt(tfOpcion.getText());
             if (opcion<1 || opcion >4)
                 throw new Exception("LA OPCION ELEGIDA DEBE SER DEL 1 AL 4");

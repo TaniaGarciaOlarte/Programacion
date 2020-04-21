@@ -48,6 +48,7 @@ public class Eje1 {
     
     public static void salir()
     {
+        bd.desconectar();
         System.exit(0);
     }
     
