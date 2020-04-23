@@ -4,7 +4,6 @@ package Tablas;
 import MisClases.*;
 import java.sql.*;
 import java.time.*;
-import java.util.ArrayList;
 
 public class TablaAcontecimiento {
     private Connection con;
