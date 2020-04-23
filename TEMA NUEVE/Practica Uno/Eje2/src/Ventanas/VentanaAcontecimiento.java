@@ -300,10 +300,25 @@ public class VentanaAcontecimiento extends javax.swing.JDialog {
     }//GEN-LAST:event_jcLugarActionPerformed
 
     private void jfFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfFechaActionPerformed
-        jfHorai.requestFocus();
-        defectoc(jfHorai,fHoras,true);  
-        defectoc(jfFecha,fFecha,false);
-        fecha = LocalDate.parse(jfFecha.getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        try
+        {
+            fecha = LocalDate.parse(jfFecha.getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            
+            if (fecha.isBefore(LocalDate.now()))
+                throw new Exception("LA FECHA TECLEADA NO ES VALIDA");
+            
+            jfHorai.requestFocus();
+            defectoc(jfHorai,fHoras,true);  
+            defectoc(jfFecha,fFecha,false);
+            jfFecha.setBackground(Color.WHITE);
+            jlError.setText("");
+        }
+        catch (Exception e)
+        {
+            jfFecha.setBackground(Color.red);
+            jfFecha.requestFocus();
+            jlError.setText(e.getMessage());
+        }
     }//GEN-LAST:event_jfFechaActionPerformed
 
     private void jfHoraiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfHoraiActionPerformed
