@@ -105,16 +105,14 @@ public class Eje3 {
     {
         ta.borrartodo();
         showMessageDialog(jd,"TODOS LOS DATOS SE HAN ELIMINADO CORRECTAMENTE");
-        jd.dispose();
-        vp.setVisible(true);
+        salirv(jd);
     }
     
     public static void borrar(String nombre,javax.swing.JDialog jd) throws Exception
     {
         ta.borrarnombre(nombre);
         showMessageDialog(jd,"EL EVENTO " + nombre + " SE HA ELIMINADO CORRECTAMENTE");
-        jd.dispose();
-        vp.setVisible(true);
+        salirv(jd);
     }
     
     public static void salir()
