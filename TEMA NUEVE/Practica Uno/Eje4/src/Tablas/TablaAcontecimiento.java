@@ -8,9 +8,21 @@ import java.util.ArrayList;
 
 public class TablaAcontecimiento {
     private Connection con;
+    private Acontecimiento a;
 
     public TablaAcontecimiento(Connection con) {
         this.con = con;
+    }
+    
+    public void estructura(ResultSet resultado) throws Exception
+    {
+        a = new Acontecimiento();
+        a.setNombre(resultado.getString("nombre"));
+        a.setLugar(resultado.getString("lugar"));
+        a.setFecha(LocalDate.parse(String.valueOf(resultado.getDate("fecha"))));
+        a.setHorai(resultado.getTime(4).toLocalTime());
+        a.setHoraf(resultado.getTime(5).toLocalTime());
+        a.setAforo(resultado.getInt(6));
     }
     
     //Practica 2
@@ -40,13 +52,7 @@ public class TablaAcontecimiento {
             ResultSet resultado = ps.executeQuery();
             if (resultado.next())
             {
-                Acontecimiento a = new Acontecimiento();
-                a.setNombre(resultado.getString("nombre"));
-                a.setLugar(resultado.getString("lugar"));
-                a.setFecha(LocalDate.parse(String.valueOf(resultado.getDate("fecha"))));
-                a.setHorai(resultado.getTime(4).toLocalTime());
-                a.setHoraf(resultado.getTime(5).toLocalTime());
-                a.setAforo(resultado.getInt(6));
+                estructura(resultado);
 
                 return a;
             }
@@ -67,13 +73,7 @@ public class TablaAcontecimiento {
             ResultSet resultado = ps.executeQuery();
             if(resultado.next())
             {
-                Acontecimiento a = new Acontecimiento();
-                a.setNombre(resultado.getString("nombre"));
-                a.setLugar(resultado.getString("lugar"));
-                a.setFecha(LocalDate.parse(String.valueOf(resultado.getDate("fecha"))));
-                a.setHorai(resultado.getTime(4).toLocalTime());
-                a.setHoraf(resultado.getTime(5).toLocalTime());
-                a.setAforo(resultado.getInt(6));
+                estructura(resultado);
 
                 return a;
             }
@@ -93,13 +93,7 @@ public class TablaAcontecimiento {
             ResultSet resultado = ps.executeQuery();
             if(resultado.next())
             {
-                Acontecimiento a = new Acontecimiento();
-                a.setNombre(resultado.getString("nombre"));
-                a.setLugar(resultado.getString("lugar"));
-                a.setFecha(LocalDate.parse(String.valueOf(resultado.getDate("fecha"))));
-                a.setHorai(resultado.getTime(4).toLocalTime());
-                a.setHoraf(resultado.getTime(5).toLocalTime());
-                a.setAforo(resultado.getInt(6));
+                estructura(resultado);
 
                 return a;
             }
@@ -118,13 +112,7 @@ public class TablaAcontecimiento {
             ResultSet resultado = ps.executeQuery();
             while(resultado.next())
             {
-                Acontecimiento a = new Acontecimiento();
-                a.setNombre(resultado.getString("nombre"));
-                a.setLugar(resultado.getString("lugar"));
-                a.setFecha(LocalDate.parse(String.valueOf(resultado.getDate("fecha"))));
-                a.setHorai(resultado.getTime(4).toLocalTime());
-                a.setHoraf(resultado.getTime(5).toLocalTime());
-                a.setAforo(resultado.getInt(6));
+                estructura(resultado);
                 
                 lista.add(a);
             }
@@ -168,13 +156,7 @@ public class TablaAcontecimiento {
             ResultSet resultado = ps.executeQuery();
             while(resultado.next())
             {
-                Acontecimiento a = new Acontecimiento();
-                a.setNombre(resultado.getString("nombre"));
-                a.setLugar(resultado.getString("lugar"));
-                a.setFecha(LocalDate.parse(String.valueOf(resultado.getDate("fecha"))));
-                a.setHorai(resultado.getTime(4).toLocalTime());
-                a.setHoraf(resultado.getTime(5).toLocalTime());
-                a.setAforo(resultado.getInt(6));
+                estructura(resultado);
                 
                 lista.add(a);
             }
