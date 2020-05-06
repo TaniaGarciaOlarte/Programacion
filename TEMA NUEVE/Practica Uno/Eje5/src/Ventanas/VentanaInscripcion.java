@@ -80,7 +80,7 @@ public class VentanaInscripcion extends javax.swing.JDialog {
 
         jLabel3.setText("Fecha");
 
-        tfFecha.setEditable(false);
+        tfFecha.setEnabled(false);
 
         jLabel4.setText("Hora");
 
