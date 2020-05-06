@@ -47,13 +47,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jmInscri = new javax.swing.JMenu();
         jmCrear = new javax.swing.JMenuItem();
         jmBorrar = new javax.swing.JMenuItem();
         jmEditar = new javax.swing.JMenuItem();
         jmInscripcion = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jmSalir = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
@@ -136,7 +136,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("XXXXXXXXXXX");
 
-        jMenu1.setText("Acontecimientos");
+        jmInscri.setText("Acontecimientos");
 
         jmCrear.setText("Crear");
         jmCrear.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +144,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 jmCrearActionPerformed(evt);
             }
         });
-        jMenu1.add(jmCrear);
+        jmInscri.add(jmCrear);
 
         jmBorrar.setText("Borrar");
         jmBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +152,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 jmBorrarActionPerformed(evt);
             }
         });
-        jMenu1.add(jmBorrar);
+        jmInscri.add(jmBorrar);
 
         jmEditar.setText("Modificar");
         jmEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +160,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 jmEditarActionPerformed(evt);
             }
         });
-        jMenu1.add(jmEditar);
+        jmInscri.add(jmEditar);
 
         jmInscripcion.setText("Inscripción");
         jmInscripcion.addActionListener(new java.awt.event.ActionListener() {
@@ -168,15 +168,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 jmInscripcionActionPerformed(evt);
             }
         });
-        jMenu1.add(jmInscripcion);
+        jmInscri.add(jmInscripcion);
 
         jMenuItem4.setText("Lista De Asistencia");
         jMenuItem4.setEnabled(false);
-        jMenu1.add(jMenuItem4);
+        jmInscri.add(jMenuItem4);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jmInscri);
 
-        jMenu2.setText("Salir");
+        jmSalir.setText("Salir");
 
         jMenuItem2.setText("Salir");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -184,9 +184,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
+        jmSalir.add(jMenuItem2);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jmSalir);
 
         setJMenuBar(jMenuBar1);
 
@@ -322,8 +322,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
@@ -335,6 +333,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmBorrar;
     private javax.swing.JMenuItem jmCrear;
     private javax.swing.JMenuItem jmEditar;
+    private javax.swing.JMenu jmInscri;
     private javax.swing.JMenuItem jmInscripcion;
+    private javax.swing.JMenu jmSalir;
     // End of variables declaration//GEN-END:variables
 }
