@@ -260,6 +260,9 @@ public class VentanaCrear extends javax.swing.JDialog {
             if (!validardato(tfNombre.getText().toUpperCase(),"^[A-Z]+( [A-Z]+)*$"))
                 throw new Exception("NOMBRE INCORRECTO");
             
+            if (tfNombre.getText().length() > 50)
+                throw new Exception("LA LONGITUD MAXIMA ES DE 50 CARACTERES");
+            
             if (Eje4.buscarnombre(tfNombre.getText().toUpperCase()))
                 throw new Exception("NOMBRE YA EXISTENTE");
             
@@ -342,6 +345,9 @@ public class VentanaCrear extends javax.swing.JDialog {
                        
            if (!validardato(tfAforo.getText(),"^[1-9][\\d]*$"))
                 throw new Exception("SOLO NUMEROS");
+           
+           if (tfAforo.getText().length() > 11)
+               throw new Exception("LA LONGITUD MAXIMA ES DE 11 NUMEROS");
            
            defectod(tfAforo);
            aforo = Integer.parseInt(tfAforo.getText());
