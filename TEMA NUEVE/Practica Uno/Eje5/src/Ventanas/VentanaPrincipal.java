@@ -54,7 +54,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jmInscripcion = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jmSalir = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jmSalirP = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
 
@@ -178,13 +178,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jmSalir.setText("Salir");
 
-        jMenuItem2.setText("Salir");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jmSalirP.setText("Salir");
+        jmSalirP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jmSalirPActionPerformed(evt);
             }
         });
-        jmSalir.add(jMenuItem2);
+        jmSalir.add(jmSalirP);
 
         jMenuBar1.add(jmSalir);
 
@@ -264,9 +264,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         bBorrar.doClick();
     }//GEN-LAST:event_jmBorrarActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jmSalirPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmSalirPActionPerformed
         Eje5.salir();
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jmSalirPActionPerformed
 
     private void jmInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmInscripcionActionPerformed
         bInscripcion.doClick();
@@ -327,7 +327,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JMenuItem jmBorrar;
@@ -336,5 +335,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jmInscri;
     private javax.swing.JMenuItem jmInscripcion;
     private javax.swing.JMenu jmSalir;
+    private javax.swing.JMenuItem jmSalirP;
     // End of variables declaration//GEN-END:variables
 }
